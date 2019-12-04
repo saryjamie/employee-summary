@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "output"
+		},
+		{
+			"path": "node_modules"
+		},
+		{
+			"path": "lib"
+		},
+		{
+			"path": "templates"
+		},
+		{
+			"path": "test"
+		}
+	]
+}

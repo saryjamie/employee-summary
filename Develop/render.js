@@ -18,7 +18,7 @@ const renderManager = manager => {
         .replace(/{{ id }}/g, manager.getId())
         .replace(/{{ officeNumber }}/g, manager.getOfficeNumber())
     teamMembers = teamMembers + managerHtml;
-    console.log(managerHtml)
+    
 };
 
 const renderEngineer = engineer => {
@@ -30,7 +30,7 @@ const renderEngineer = engineer => {
         .replace(/{{ id }}/g, engineer.getId())
         .replace(/{{ github }}/g, engineer.getGithub())
     teamMembers = teamMembers + engineerHtml;
-    console.log(engineerHtml)
+    
 };
 
 const renderIntern = intern => {
@@ -42,7 +42,7 @@ const renderIntern = intern => {
         .replace(/{{ id }}/g, intern.getId())
         .replace(/{{ school }}/g, intern.getSchool())
     teamMembers = teamMembers + internHtml;
-    console.log(internHtml)
+    
 };
 
 
@@ -67,7 +67,7 @@ function renderMain() {
     var mainHtml = ""
     mainHtml = mainHtml + mainTemplate.replace(/{{ team }}/g, teamMembers)
     let file = path.join(__dirname, 'output', "/index.html");
-    console.log(file);
+    // console.log(file);
     fs.writeFile(file, mainHtml, function(err) {
         if (err) {
             throw new Error(err)

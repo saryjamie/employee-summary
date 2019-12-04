@@ -5,9 +5,8 @@ const generateManager = renderFile.createManager
 const generateEngineer = renderFile.createEngineer
 const generateIntern = renderFile.createIntern
 const renderHTML = renderFile.renderMain
-​
+
 function askQuestions() {
-​
     inquirer
         .prompt([{
                 type: "input",
@@ -74,9 +73,9 @@ function askQuestions() {
                         break
                 }
             })
-​
 }
-​
+
+
 function addOtherMembers() {
     inquirer.prompt({
             type: "confirm",
@@ -97,9 +96,4 @@ function addOtherMembers() {
             throw err
         })
 }
-​
-​
 askQuestions()
-
-
-

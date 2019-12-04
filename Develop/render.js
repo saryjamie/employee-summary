@@ -6,8 +6,8 @@ const Engineer = require("./lib/engineer")
 const Intern = require("./lib/intern")
 const Manager = require("./lib/manager")
 let teamMembers = ""
-​
-​
+
+
 // Rendering the different employee roles
 const renderManager = manager => {
     let template = fs.readFileSync(path.resolve(templateDir, "manager.html"), "utf8");
@@ -20,7 +20,7 @@ const renderManager = manager => {
     teamMembers = teamMembers + managerHtml;
     console.log(managerHtml)
 };
-​
+
 const renderEngineer = engineer => {
     let template = fs.readFileSync(path.resolve(templateDir, "engineer.html"), "utf8");
     var engineerHtml = ""
@@ -32,7 +32,7 @@ const renderEngineer = engineer => {
     teamMembers = teamMembers + engineerHtml;
     console.log(engineerHtml)
 };
-​
+
 const renderIntern = intern => {
     let template = fs.readFileSync(path.resolve(templateDir, "intern.html"), "utf8");
     var internHtml = ""
@@ -44,25 +44,24 @@ const renderIntern = intern => {
     teamMembers = teamMembers + internHtml;
     console.log(internHtml)
 };
-​
-​
-​
+
+
 // Functions to create each new Constructor
 function createManager(name, id, email, officeNumber) {
     const manager = new Manager(name, id, email, officeNumber)
     renderManager(manager)
 }
-​
+
 function createEngineer(name, id, email, github) {
     const engineer = new Engineer(name, id, email, github)
     renderEngineer(engineer)
 }
-​
+
 function createIntern(name, id, email, school) {
     const intern = new Intern(name, id, email, school)
     renderIntern(intern)
 }
-​
+
 function renderMain() {
     let mainTemplate = fs.readFileSync(path.resolve(templateDir, "main.html"), "utf8")
     var mainHtml = ""
@@ -76,7 +75,7 @@ function renderMain() {
         console.log('done writing file')
     })
 }
-​
+
 module.exports = {
     createManager: createManager,
     createEngineer: createEngineer,
